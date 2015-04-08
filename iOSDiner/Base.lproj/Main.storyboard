@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="CTCViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bg_wall.png" translatesAutoresizingMaskIntoConstraints="NO" id="avP-Wu-BJ1">
+                                <rect key="frame" x="-8" y="0.0" width="480" height="320"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="person.png" translatesAutoresizingMaskIntoConstraints="NO" id="DrH-Jw-xjE">
+                                <rect key="frame" x="326" y="26" width="162" height="268"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="sign_theiOSdiner.png" translatesAutoresizingMaskIntoConstraints="NO" id="y5o-1D-ICG">
+                                <rect key="frame" x="170" y="34" width="165" height="76"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="chalkboard.png" translatesAutoresizingMaskIntoConstraints="NO" id="ghZ-9x-gI4">
+                                <rect key="frame" x="-5" y="34" width="172" height="212"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bg_counter.png" translatesAutoresizingMaskIntoConstraints="NO" id="wp5-po-kCQ">
+                                <rect key="frame" x="0.0" y="254" width="480" height="66"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="total_field.png" translatesAutoresizingMaskIntoConstraints="NO" id="kFk-2v-esC">
+                                <rect key="frame" x="340" y="254" width="134" height="51"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="food_box.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZSv-bq-7YH">
+                                <rect key="frame" x="176" y="163" width="143" height="123"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lC-ig-byz">
+                                <rect key="frame" x="268" y="125" width="50" height="30"/>
+                                <state key="normal" title="+1" backgroundImage="button_silver.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ibaAddItem:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kPB-BX-nM1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5i-cP-YUw">
+                                <rect key="frame" x="162" y="186" width="19" height="33"/>
+                                <state key="normal" backgroundImage="button_arrow_left.png"/>
+                                <connections>
+                                    <action selector="ibaLoadPreviousItem:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zo2-yR-11J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zw1-dt-223">
+                                <rect key="frame" x="199" y="125" width="50" height="30"/>
+                                <state key="normal" title="-1" backgroundImage="button_silver.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ibaRemoveItem:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XFm-bf-LK1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lea-b2-wEU">
+                                <rect key="frame" x="315" y="186" width="19" height="33"/>
+                                <state key="normal" backgroundImage="button_arrow.png"/>
+                                <connections>
+                                    <action selector="ibaLoadNextItem:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TSG-dm-RpT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeD-dd-mxK">
+                                <rect key="frame" x="9" y="243" width="134" height="52"/>
+                                <state key="normal" title="Total" backgroundImage="total_field.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ibaCalculateTotal:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UxU-fZ-OkZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYZ-Cq-RaK">
+                                <rect key="frame" x="15" y="50" width="129" height="177"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AaN-tM-D55">
+                                <rect key="frame" x="189" y="174" width="118" height="93"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFX-ZW-Per">
+                                <rect key="frame" x="354" y="264" width="106" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="ibAddItemButton" destination="5lC-ig-byz" id="QMK-Fw-hWf"/>
+                        <outlet property="ibChalkboardLabel" destination="IYZ-Cq-RaK" id="QWa-km-48Q"/>
+                        <outlet property="ibCurrentItemImageView" destination="AaN-tM-D55" id="Z9L-fb-D1c"/>
+                        <outlet property="ibCurrentItemLabel" destination="uFX-ZW-Per" id="LeD-6C-VZR"/>
+                        <outlet property="ibNextItemButton" destination="lea-b2-wEU" id="yIb-Bj-CxC"/>
+                        <outlet property="ibPreviousItemButton" destination="J5i-cP-YUw" id="NCT-S2-WqX"/>
+                        <outlet property="ibRemoveItemButton" destination="Zw1-dt-223" id="zaE-dW-d2n"/>
+                        <outlet property="ibTotalOrderButton" destination="LeD-dd-mxK" id="5X2-t8-x4v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="143" y="137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_counter.png" width="480" height="66"/>
+        <image name="bg_wall.png" width="480" height="320"/>
+        <image name="button_arrow.png" width="19" height="33"/>
+        <image name="button_arrow_left.png" width="19" height="33"/>
+        <image name="button_silver.png" width="45" height="27"/>
+        <image name="chalkboard.png" width="172" height="212"/>
+        <image name="food_box.png" width="143" height="123"/>
+        <image name="person.png" width="162" height="268"/>
+        <image name="sign_theiOSdiner.png" width="165" height="76"/>
+        <image name="total_field.png" width="134" height="51"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
